@@ -21,10 +21,7 @@ public class DynamicIntArray {
             result[i] = this.data[i];
         }
         result[result.length-1] = element;
-        this.data = new int[result.length];
-        for (int i=0; i<result.length; i++) {
-            this.data[i] = result[i];
-        }
+        this.data=result;
     }
 
     public void remove(int element) {
@@ -35,10 +32,7 @@ public class DynamicIntArray {
         for (int i=element; i<result.length; i++) {
             result[i] = this.data[i+1];
         }
-        this.data = new int[result.length];
-        for (int i=0; i<result.length; i++) {
-            this.data[i] = result[i];
-        }
+        this.data=result;
     }
 
     public void insert(int index, int value) {
@@ -53,10 +47,7 @@ public class DynamicIntArray {
         for (int i=index; i<this.data.length; i++) {
             result[i+1] = this.data[i];
         }
-        this.data = new int[result.length];
-        for (int i=0; i<result.length; i++) {
-            this.data[i] = result[i];
-        }
+        this.data=result;
     }
 
     public String toString() {
